@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Cities with Cybercrime Rates</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="top_city.js" defer></script>
+    <link rel="stylesheet" href="city.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h2>Top 5 Cities with the Highest and Lowest Cybercrime Rates</h2>
+        </div>
+
+        <div class="cities-container">
+            <div class="top-cities">
+                <h3>Top 5 Cities with Highest Cybercrime Rates</h3>
+                <ul id="top-cities-list">
+                    <!-- Dynamically populated with JavaScript -->
+                </ul>
+            </div>
+
+            <div class="lowest-cities">
+                <h3>Top 5 Cities with Lowest Cybercrime Rates</h3>
+                <ul id="lowest-cities-list">
+                    <!-- Dynamically populated with JavaScript -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Canvas elements for displaying the charts -->
+        <div class="visualization">
+            <h3>Chart for op 5 Cities with Highest Cybercrime Rates</h3>
+            <canvas id="high-crime-chart" width="400" height="200"></canvas>
+            <h3>Chart for Top 5 Cities with Lowest Cybercrime Rates</h3>
+            <canvas id="low-crime-chart" width="400" height="200"></canvas>
+        </div>
+    </div>
+</body>
+</html>

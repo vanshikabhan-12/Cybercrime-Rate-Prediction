@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Account Detector</title>
+    <link rel="stylesheet" href="social.css">
+    <style>
+         /* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Wrapper for aligning profile and navigation */
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* User profile section */
+.user-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.username {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #444;
+    right: 0;
+    top: 35px;
+    min-width: 150px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Show dropdown when clicked */
+.user-menu.active .dropdown-content {
+    display: block;
+}
+
+/* Navigation Bar */
+.nav-area {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Pushes nav links to the right */
+}
+
+.nav-area li {
+    margin-left: 20px;
+}
+
+.nav-area a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-area a:hover {
+    color: #007bff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <!-- User Profile Section -->
+            <div class="user-menu" onclick="toggleDropdown()">
+                <span class="username">Welcome, User</span>
+                <button class="dropdown-button">▼</button>
+                <div class="dropdown-content">
+                    <a href="profile.php">Profile</a>
+                    
+                    <a href="before login.html">Logout</a>
+                </div>
+            </div>
+    
+            <!-- Navigation Menu -->
+            <ul class="nav-area">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="map.php">MapIt</a></li>
+                <li><a href="crime.php">Crime Stats</a></li>
+                <li><a href="social.html">Fake Account Detector</a></li>
+                <li><a href="top_cities.php">Top city</a></li>
+                <li><a href="cyberbot.html">Cyber bot</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <h1>🔍 Fake Account Detector</h1>
+        <p>Enter an Instagram username to check if it's fake.</p>
+        <input type="text" id="username" placeholder="Enter username">
+        <button onclick="checkUser()">Check</button>
+        <div id="result"></div>
+    </div>
+    <script src="social.js"></script>
+    <!-- Inline JavaScript for Dropdown -->
+<script>
+    function toggleDropdown() {
+        let userMenu = document.querySelector(".user-menu");
+        userMenu.classList.toggle("active");
+    }
+</script>
+</body>
+</html>

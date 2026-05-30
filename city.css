@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://wallpapercave.com/wp/wp6781415.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff; /* White for header text */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    margin: 100px auto;
+    width: 80%;
+}
+
+/* Cities Container */
+.cities-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.top-cities, .lowest-cities {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.9); /* Lighter transparent card */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Updated Text Color for Card Titles */
+.top-cities h3, .lowest-cities h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1c1c1c; /* Darker text for headings */
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 18px;
+    color: #333; /* Darker text for list items */
+    margin: 8px 0;
+}
+
+/* Visualization Section */
+.visualization {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Canvas Styling with Lighter Background */
+.visualization canvas {
+    width: 100% !important; /* Force full-width for the canvas */
+    height: 400px !important; /* Force height for the canvas */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* More white background for canvas */
+}
+
+/* Remove gridlines for Chart.js */
+.visualization canvas {
+    /* Ensure no gridlines */
+    background-color: rgba(255, 255, 255, 0.9) !important; /* White background */
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cities-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-cities, .lowest-cities {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .visualization {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-cities, .lowest-cities {
+        width: 90%;
+    }
+
+    .visualization {
+        padding: 15px;
+    }
+}

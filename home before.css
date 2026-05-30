@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.272)), url("https://wallpapercave.com/wp/wp6781415.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; /* Adds space for the fixed header */
+    animation: backgroundAnimation 10s infinite linear; /* Dynamic background animation */
+}
+
+/* Animation for background */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: center;
+    }
+    50% {
+        background-position: top center;
+    }
+    100% {
+        background-position: center;
+    }
+}
+
+/* Header Section */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Wrapper for Header Layout */
+.wrapper {
+    display: flex;
+    justify-content: space-between; /* Distributes items to both ends */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Menu */
+.nav-area {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Ensures that nav items are pushed to the right */
+}
+
+.nav-area li {
+    margin-left: 20px; /* Adds spacing between items */
+}
+
+.nav-area a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-area a:hover {
+    color: #007bff;
+}
+
+/* Welcome Section */
+.welcome-text {
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Ensures each line is stacked vertically */
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Ensure it's fully centered below the header */
+    animation: fadeInUp 2s ease-out; /* Animation for smooth transition */
+}
+
+/* Animation for Welcome Text */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block; /* Makes sure the h1 is on a new line */
+}
+
+.welcome-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: block; /* Makes sure the p is on a new line */
+}
+
+.welcome-text .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.welcome-text .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-area {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-area li {
+        margin: 10px 0;
+    }
+
+    /* Adjust welcome text positioning on small screens */
+    .welcome-text {
+        padding-top: 50px; /* Adjust as needed */
+    }
+}

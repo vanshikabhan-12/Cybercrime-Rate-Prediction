@@ -1,0 +1,102 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://wallpapercave.com/wp/wp6781415.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    margin: 100px auto;
+    width: 80%;
+}
+
+/* Cities Container */
+.cities-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.top-cities, .lowest-cities {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter transparent card for better text visibility */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Shadow to make the card stand out */
+    color: #333; /* Dark text color for readability */
+}
+
+.top-cities h3, .lowest-cities h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Darker text for the headings */
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 18px;
+    color: #333;
+    margin: 8px 0;
+}
+
+/* Visualization Section */
+.visualization {
+    margin-top: 50px;
+    text-align: center;
+}
+
+canvas {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cities-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-cities, .lowest-cities {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-cities, .lowest-cities {
+        width: 90%;
+    }
+}

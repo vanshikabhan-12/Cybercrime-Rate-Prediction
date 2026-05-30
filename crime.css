@@ -1,0 +1,298 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://wallpapercave.com/wp/wp6781415.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+h2{
+    margin: 30px 0;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+.filter-section select,
+.filter-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.filter-section button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-section button:hover {
+    background-color: #4cae4c;
+}
+
+/* Form Styling */
+#predictForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+#predictForm label {
+    margin-right: 3px;
+    font-size: 16px;
+    color: #333;
+}
+
+#predictForm select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+}
+
+#predictForm button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+}
+
+#predictForm button:hover {
+    background-color: #4cae4c;
+}
+
+/* Predicted Crime Rate Display */
+#result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#result-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    min-width: 250px;
+}
+
+/* Data Display Section */
+.data-display {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+}
+
+.card {
+    width: 250px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.card p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Visualization Section */
+.visualization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Canvas Styling (Like Cards) */
+.visualization canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 95%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chart Dimensions */
+#bar-chart {
+    width: 90%;
+    max-width: 800px;
+    height: 400px;
+    margin-bottom: 0;
+}
+
+#pie-chart {
+    width: 45%;
+    max-width: 400px;
+    height: 250px;
+    margin-top: -10px;
+}
+
+/* Chart Header */
+.visualization .chart-header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e8dcdc;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+.data-display {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Wrapper for aligning profile and navigation */
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* User profile section */
+.user-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.username {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #444;
+    right: 0;
+    top: 35px;
+    min-width: 150px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Show dropdown when clicked */
+.user-menu.active .dropdown-content {
+    display: block;
+}
+
+/* Navigation Bar */
+.nav-area {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Pushes nav links to the right */
+}
+
+.nav-area li {
+    margin-left: 20px;
+}
+
+.nav-area a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-area a:hover {
+    color: #007bff;
+}

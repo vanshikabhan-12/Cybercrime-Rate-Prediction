@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                url("https://wallpapercave.com/wp/wp6781415.jpg") no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Wrapper for aligning profile and navigation */
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* User profile section */
+.user-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.username {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #444;
+    right: 0;
+    top: 35px;
+    min-width: 150px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Show dropdown when clicked */
+.user-menu.active .dropdown-content {
+    display: block;
+}
+
+/* Navigation Bar */
+.nav-area {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Pushes nav links to the right */
+}
+
+.nav-area li {
+    margin-left: 20px;
+}
+
+.nav-area a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-area a:hover {
+    color: #007bff;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    color: #ffdd57;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cards Section */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #ffdd57;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+/* Button inside card */
+.card .btn {
+    padding: 10px 18px;
+    background: linear-gradient(45deg, #ff8c00, #ff0080);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.card .btn:hover {
+    background: linear-gradient(45deg, #ff0080, #ff8c00);
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(255, 140, 0, 0.5);
+}

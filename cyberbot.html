@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber Bot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #007bff ; 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    #chat-container {
+      width: 550px;
+      height: 700px;
+      margin: 50px auto;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #chat-header {
+      background: #003f7f;
+      color: white;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    #chat-header img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+
+    #chat-box {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background-image: url('https://lottiefiles.com/free-animation/hacker-using-laptop-FGkoh5URwk');
+    }
+
+    .msg-user, .msg-bot {
+      max-width: 85%;
+      padding: 12px;
+      margin: 10px;
+      border-radius: 12px;
+      font-size: 16px;
+      line-height: 1.5;
+      word-wrap: break-word;
+      white-space: pre-line;
+    }
+
+    .msg-user {
+      background: #cce5ff;
+      align-self: flex-end;
+    }
+
+    .msg-bot {
+      background: #e9ecef;
+      align-self: flex-start;
+    }
+
+    #controls {
+      display: flex;
+      padding: 12px;
+      border-top: 1px solid #ccc;
+      background: #f0f0f0;
+    }
+
+    #user-input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      margin-left: 6px;
+      padding: 10px 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .speak-btn {
+      background: #e9e9e9;
+      color: black;
+    }
+
+    .speak-btn:hover {
+      background: #d6d6d6;
+    }
+    
+        
+         /* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Wrapper for aligning profile and navigation */
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* User profile section */
+.user-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.username {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #444;
+    right: 0;
+    top: 35px;
+    min-width: 150px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Show dropdown when clicked */
+.user-menu.active .dropdown-content {
+    display: block;
+}
+
+/* Navigation Bar */
+.nav-area {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Pushes nav links to the right */
+}
+
+.nav-area li {
+    margin-left: 20px;
+}
+
+.nav-area a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-area a:hover {
+    color: #007bff;
+}
+   
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrapper">
+        <!-- User Profile Section -->
+        <div class="user-menu" onclick="toggleDropdown()">
+            <span class="username">Welcome, User</span>
+            <button class="dropdown-button">▼</button>
+            <div class="dropdown-content">
+                <a href="profile.php">Profile</a>
+                
+                <a href="before login.html">Logout</a>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-area">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="map.php">MapIt</a></li>
+            <li><a href="crime.php">Crime Stats</a></li>
+            <li><a href="social.html">Fake Account Detector</a></li>
+            <li><a href="top_cities.php">Top city</a></li>
+            <li><a href="cyberbot.html">Cyber bot</a></li>
+        </ul>
+    </div>
+</header>
+  <div id="chat-container">
+    <div id="chat-header">
+      <img src="https://media.giphy.com/media/IaP1tSYJjx0rW/giphy.gif" alt="Cyber Bot">
+      <strong>Cyber Bot</strong>
+    </div>
+    <div id="chat-box">
+      <div class="msg-bot">
+        👋 Hello! I’m Cyber Bot – your assistant to detect suspicious content and help you navigate this platform.<br><br>
+        💡 Here are the modules I can assist you with:<br>
+        🔹 <b>Cyber Stats</b>: Check crime rates by city, year, type<br>
+        🔹 <b>MapIt</b>: Click a location to fill your dashboard<br>
+        🔹 <b>Top City</b>: Know top and lowest crime cities<br>
+        🔹 <b>Fake Account Detector</b>: Is that profile real?<br>
+        🔹 <b>Analyze Website or Message</b>: Paste text or links
+      </div>
+    </div>
+    <div id="controls">
+      <input type="text" id="user-input" placeholder="Type a message or URL…">
+      <button id="send-btn">Send</button>
+      <button id="voice-btn">🎙️</button>
+      <button id="speak-btn" class="speak-btn">🔈</button>
+    </div>
+  </div>
+
+  <script>
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+    const voiceBtn = document.getElementById('voice-btn');
+    const speakBtn = document.getElementById('speak-btn');
+
+    let lastBotReply = "";
+
+    sendBtn.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', e => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    async function sendMessage() {
+      const msg = userInput.value.trim();
+      if (!msg) return;
+      appendMessage('user', msg);
+      userInput.value = '';
+
+      const res = await fetch('message.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ message: msg })
+      });
+
+      const data = await res.json();
+      lastBotReply = data.reply;
+      appendMessage('bot', lastBotReply);
+    }
+
+    function appendMessage(sender, text) {
+      const div = document.createElement('div');
+      div.className = sender === 'user' ? 'msg-user' : 'msg-bot';
+      div.innerText = text;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    speakBtn.addEventListener('click', () => {
+      if (lastBotReply) {
+        const utterance = new SpeechSynthesisUtterance(lastBotReply);
+        utterance.lang = 'en-US';
+        window.speechSynthesis.speak(utterance);
+      }
+    });
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'en-US';
+      recognition.continuous = false;
+      recognition.onresult = e => {
+        userInput.value = e.results[0][0].transcript;
+        sendMessage();
+      };
+      voiceBtn.addEventListener('click', () => recognition.start());
+    } else {
+      voiceBtn.disabled = true;
+    }
+  </script>
+</body>
+</html>

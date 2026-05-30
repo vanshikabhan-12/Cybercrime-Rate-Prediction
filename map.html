@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Location - Cyber Crime Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/datamaps@0.5.9/dist/datamaps.ind.js"></script> 
+</head>
+<body>
+    <h2 style="text-align: center;">Click on a State to Predict Cyber Crime</h2>
+
+    <div id="map-container">
+        <div id="india-map" style="position: relative; width: 700px; height: 500px; margin: auto;"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var map = new Datamap({
+                element: document.getElementById("india-map"),
+                scope: 'india',
+                geographyConfig: {
+                    popupOnHover: true,
+                    highlightOnHover: true,
+                    borderColor: '#444',
+                    borderWidth: 1,
+                    dataUrl: 'https://raw.githubusercontent.com/datamaps-india/datamaps-india/master/public/data/states.json', // Fetch India Map Data
+                    popupTemplate: function(geo, data) {
+                        return `<div class="hoverinfo">${geo.properties.name}</div>`;
+                    }
+                },
+                fills: {
+                    defaultFill: "#DDDDDD"
+                },
+                data: {},
+                done: function(datamap) {
+                    datamap.svg.selectAll('.datamaps-subunit').on('click', function(geo) {
+                        var state = geo.properties.name;
+                        var city = prompt("Enter city in " + state + ":"); // Ask user to input city
+                        if (city) {
+                            window.location.href = `crime.php?state=${encodeURIComponent(state)}&city=${encodeURIComponent(city)}`;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

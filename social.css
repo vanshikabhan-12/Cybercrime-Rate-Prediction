@@ -1,0 +1,72 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                url("https://wallpapercave.com/wp/wp6781415.jpg");
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 40%;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Title */
+h1 {
+    color: #ff5e62;
+}
+
+/* Input Field */
+input {
+    padding: 12px;
+    width: 80%;
+    border: 2px solid #ff5e62;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    padding: 12px 20px;
+    background: #ff5e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #e04852;
+}
+
+/* Result Section */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* User Photo */
+.user-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
